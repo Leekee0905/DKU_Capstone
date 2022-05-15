@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
-import './index.css';
+
 import Home from './Home';
 import Info from './Info';
-import Board from './Board';
+import Issue from './Issue';
+import Login from './Login';
+import Free from './Free';
+import Git from './Git';
+import Signup from './Signup';
 import reportWebVitals from './reportWebVitals';
 
 function App() {
@@ -13,7 +17,11 @@ function App() {
         <Routes>
           <Route path="/*" element={<Home />}></Route>
           <Route path="/Info" element={<Info />}></Route>
-          <Route path="/Board" element={<Board />}></Route>
+          <Route path="/Issue" element={<Issue />}></Route>
+          <Route path="/Login" element={<Login />}></Route>
+          <Route path="/Free" element={<Free />}></Route>
+          <Route path="/Git" element={<Git />}></Route>
+          <Route path="/Signup" element={<Signup />}></Route>
         </Routes>
     </div>
   );
