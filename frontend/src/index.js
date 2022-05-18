@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Home';
 import Info from './Info';
 import Issue from './Issue';
@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
         <Routes>
-          <Route path="/*" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/Info" element={<Info />}></Route>
           <Route path="/Issue" element={<Issue />}></Route>
           <Route path="/Login" element={<Login />}></Route>
