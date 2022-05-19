@@ -7,13 +7,16 @@ import Info from './Info';
 import Issue from './Issue';
 import Login from './Login';
 import Free from './Free';
+import List from './boardpage/List'
 import Git from './Git';
 import Signup from './Signup';
 import reportWebVitals from './reportWebVitals';
+import { Container } from 'react-bootstrap';
 
 function App() {
   return (
     <div>
+
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Info" element={<Info />}></Route>
@@ -22,7 +25,9 @@ function App() {
           <Route path="/Free" element={<Free />}></Route>
           <Route path="/Git" element={<Git />}></Route>
           <Route path="/Signup" element={<Signup />}></Route>
+          <Route path="/List" exact={true} component={''}></Route>
         </Routes>
+
     </div>
   );
 }

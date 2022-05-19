@@ -13,6 +13,7 @@ export function Header(){
         <Nav className="mr-auto">
           <Link className = 'headerlink' to="/Info">정보/구인</Link>
           <Link className = 'headerlink' to="/Issue">이슈/질문</Link>
+          <Link className = 'headerlink' to="/Free">자유</Link>
           <NavDropdown title="깃허브" id="basic-nav-dropdown">
             <NavDropdown.Item href="#/Git">깃허브 툴 사용하기</NavDropdown.Item>
             <NavDropdown.Item href="https://github.com">깃허브 바로가기</NavDropdown.Item>
