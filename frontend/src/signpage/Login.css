@@ -1,0 +1,34 @@
+.logintext{
+  margin-top: 17%;
+  margin-bottom: 2%;
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control{
+  width: 75%;
+  text-align: center;
+  border: center;
+}
+
+
+.tocenter{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-3 {
+  width: 75%;
+}
+
+.submit {
+  display: block;
+  width: 75%;
+}
+
+.btn-primary {
+  margin-left: auto;
+  display: block;
+}
