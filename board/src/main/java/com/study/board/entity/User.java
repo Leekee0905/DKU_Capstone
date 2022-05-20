@@ -9,14 +9,18 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Board {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer USER_NO;
 
-    private String title;
+    private String USER_ID;
 
-    private String content;
+    private String USER_PW;
+
+    private String USER_NNAME;
+
+    private String USER_EMAIL;
 }
 
