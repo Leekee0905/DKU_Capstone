@@ -1,5 +1,4 @@
 import React from 'react';
-import {Header} from '../layout/Header';
 import {Table} from 'react-bootstrap';
 
 export function List(){

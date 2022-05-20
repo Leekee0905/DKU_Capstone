@@ -19,7 +19,7 @@ export function Header(){
             <NavDropdown.Item href="https://github.com">깃허브 바로가기</NavDropdown.Item>
           </NavDropdown>
         </Nav>
-        <p className='search'>
+        <div className='search'>
           <Form className="d-flex">
             <FormControl
               type="search"
@@ -29,11 +29,11 @@ export function Header(){
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-        </p>
-        <p className='signbox'>
+        </div>
+        <div className='signbox'>
           <Link className='sign' to="/Signup">회원가입</Link>
           <Link className='sign' to="/Login">로그인</Link>
-        </p>
+        </div>
         
       </Navbar.Collapse>      
     </Navbar>

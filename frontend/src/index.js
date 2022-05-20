@@ -5,13 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Home';
 import Info from './Info';
 import Issue from './Issue';
-import Login from './Login';
+import Login from './signpage/Login';
 import Free from './Free';
-import List from './boardpage/List'
 import Git from './Git';
-import Signup from './Signup';
+import Signup from './signpage/Signup';
 import reportWebVitals from './reportWebVitals';
-import { Container } from 'react-bootstrap';
+
 
 function App() {
   return (
