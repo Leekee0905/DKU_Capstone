@@ -16,6 +16,18 @@
 </style>
 <body>
 
+<img src="https://www.dankook.ac.kr/html_repositories/images/www/kor_content/est_ui_int01.jpg" width="300px" height="100px">
+<hr>
+
+<div style="text-align:center">
+<th>학과</th>
+<th>정보/구인</th>
+<th>질문/이슈</th>
+<th>자유</th>
+<th>깃허브</th>
+</div>
+<hr>
+<center>자유게시판</center>
     <div class="layout"></div>
 
         <table>
@@ -27,8 +39,10 @@
             </thead>
             <tbody>
                 <tr th:each="board : ${list}">
-                    <td th:text="${board.id}">1</td>
-                    <td th:text="${board.title}">제목입니다.</td>
+                    <th th:text="${board.id}">1</th>
+                    <th>
+                        <a th:text="${board.title}" th:href="@{/board/view(id=${board.id})}"></a>
+                    </th>
                 </tr>
             </tbody>
         </table>
