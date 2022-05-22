@@ -1,0 +1,19 @@
+.topleft {
+  width: 50%;
+  float: left;
+}
+
+.topright{
+  width: 50%;
+  float: right;
+}
+
+.bottomcenter{
+  margin-top: 30%;
+  height: 50%;
+}
+
+
+.gap{
+  margin-top: 100px;
+}

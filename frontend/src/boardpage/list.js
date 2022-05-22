@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import {Table} from 'react-bootstrap';
+import {Table, Form} from 'react-bootstrap';
+import './List.css';
+
 
 export function List(){
   const [posts,setPosts]=useState([
@@ -10,39 +12,45 @@ export function List(){
     {id:5, title:"내용5"},
     {id:6, title:"내용6"}
   ]);
+
+  const [post,setPost] = useState({
+    id:'',
+    title:'',
+    content: ''
+  });
+  function handleWrite(){
+    let post = {id:7, title:"인풋값"};
+  }
   return (
   <div>
     <Table striped bordered hover>
       <thead>
         <tr>
-          {posts.map((post)=><th>{post.id}</th>)}
+
           {posts.map((post)=><th>{post.title}</th>)}
-          <th>Username</th>
-          <th>time</th>
-          <th>views</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+
         </tr>
         <tr>
           <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+
         </tr>
         <tr>
           <td>3</td>
-          <td>Larry the Bird</td>
-          <td>hi</td>
-          <td>@twitter</td>
+
         </tr>
       </tbody>
+      <Form>
+        <input type="text" placeholder="제목을 입력하세요" value={post.title}/>
+        <input className='content' type="text" placeholder="내용을 입력하세요" value={post.content}/>
+        <button type='button' onClick={handleWrite}>글쓰기</button>
+      </Form>
     </Table>
+    
   </div>
   )
   

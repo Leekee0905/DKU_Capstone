@@ -10,12 +10,13 @@ import Free from './Free';
 import Git from './Git';
 import Signup from './signpage/Signup';
 import reportWebVitals from './reportWebVitals';
-
+import Header from './layout/Header';
+import Write from './boardpage/Write';
 
 function App() {
   return (
     <div>
-
+      <Header></Header>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Info" element={<Info />}></Route>
@@ -24,8 +25,8 @@ function App() {
           <Route path="/Free/*" element={<Free />}></Route>
           <Route path="/Git" element={<Git />}></Route>
           <Route path="/Signup" element={<Signup />}></Route>
+          <Route path="/Write" element={<Write/>}></Route>
         </Routes>
-
     </div>
   );
 }

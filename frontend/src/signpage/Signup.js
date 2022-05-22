@@ -1,12 +1,10 @@
 import React from 'react';
-import {Header} from '../layout/Header';
 import {Form, Button, Container} from 'react-bootstrap';
 import './Signup.css';
 
 function Signup(){
   return (
   <div>
-    <Header></Header>
     <Container>
     <h3 className='signuptext'>회원가입</h3>
     <Form className='form'>

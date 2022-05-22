@@ -1,5 +1,4 @@
 import React from 'react';
-import {Header} from '../layout/Header';
 import {Form, Button, Container} from 'react-bootstrap';
 import './Login.css'
 
@@ -7,7 +6,6 @@ import './Login.css'
 function Login(){
   return (
   <div>
-    <Header></Header>
     <Container>
       <h3 className='logintext'>로그인</h3>
     <Form className='form'>
