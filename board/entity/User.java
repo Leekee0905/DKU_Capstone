@@ -1,6 +1,7 @@
 package com.study.board.entity;
 
 import lombok.Data;
+import org.springframework.data.jpa.repository.Query;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,5 +23,8 @@ public class User {
     private String USER_NNAME;
 
     private String USER_EMAIL;
+
+
 }
+
 

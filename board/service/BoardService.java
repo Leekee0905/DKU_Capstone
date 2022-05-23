@@ -4,12 +4,18 @@ import com.study.board.entity.Board;
 import com.study.board.entity.User;
 import com.study.board.repository.BoardRepository;
 import com.study.board.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static org.omg.PortableServer.IdAssignmentPolicyValue.USER_ID;
+
 @Service
+@RequiredArgsConstructor
+@Slf4j
 public class BoardService {
 
     @Autowired
@@ -37,4 +43,6 @@ public class BoardService {
 
         return boardRepository.findById(id).get();
     }
+
+
 }

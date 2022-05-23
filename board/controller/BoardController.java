@@ -2,18 +2,20 @@ package com.study.board.controller;
 
 import com.study.board.entity.Board;
 import com.study.board.entity.User;
+import com.study.board.repository.UserRepository;
 import com.study.board.service.BoardService;
+import com.study.board.service.LoginService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.security.sasl.SaslServer;
 
+@Slf4j
 @Controller
 public class BoardController {
 
@@ -71,6 +73,7 @@ public class BoardController {
         return "boardmodify";
     }
 
+
     @PostMapping("/board/update/{id}")
     public String boardUpdate(@PathVariable("id") Integer id, Board board) {
 
@@ -83,4 +86,6 @@ public class BoardController {
         return "redirect:/board/list";
 
     }
+
+
 }
