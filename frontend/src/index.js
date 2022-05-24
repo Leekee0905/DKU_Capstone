@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState,useEffect}from 'react';
 import ReactDOM from 'react-dom/client';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +13,12 @@ import reportWebVitals from './reportWebVitals';
 import Header from './layout/Header';
 import Write from './boardpage/Write';
 
+
+
+
+
 function App() {
+
   return (
     <div>
       <Header></Header>
@@ -25,9 +30,10 @@ function App() {
           <Route path="/Free/*" element={<Free />}></Route>
           <Route path="/Git" element={<Git />}></Route>
           <Route path="/Signup" element={<Signup />}></Route>
-          <Route path="/Write" element={<Write/>}></Route>
+          <Route path='/Write' element={<Write/>}/>
         </Routes>
     </div>
+    
   );
 }
 

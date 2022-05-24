@@ -1,19 +1,28 @@
-.topleft {
-  width: 50%;
-  float: left;
+div{
+  display:block;
 }
 
-.topright{
-  width: 50%;
-  float: right;
+div.card h3 > a{
+  line-height: 20px;
+  color: #057717;
+  font-size: 14px;
+  font-weight: bold;
+  margin-inline-start: 10px;
+}
+a{
+  color: #666;
+  text-decoration: none;
 }
 
-.bottomcenter{
-  margin-top: 30%;
-  height: 50%;
+.boardcontainer > div.main > div.card{
+  margin: 0;
+  padding: 0px 2px 4px 2px;
 }
 
-
-.gap{
-  margin-top: 100px;
+.card{
+  margin: 12px;
 }
+.boardcontainer{
+  margin-top: 5%;
+}
+

@@ -1,25 +1,27 @@
 import React from 'react';
-import { Container,Button, Card } from 'react-bootstrap';
+import { Container,Card } from 'react-bootstrap';
+import './Git.css'
 
 function Git(){
   return(
       <div>
         <h2>Git</h2>
-        <Container>
-          <Button>new repository</Button>
-          <Button>Add Local Repository</Button>
-          <Button>Clone Repository</Button>
-          <Button>Issue</Button>
-          <Button>Current Repository</Button>
-          <Card>
-            <Card.Title>Profile</Card.Title>
-          </Card>
-          <Card>
-            <Card.Title>Name</Card.Title>
-          </Card>
-          <Card>
-            <Card.Title>NickName</Card.Title>
-          </Card>
+        <Container className="block-example border border-dark">
+            <button className='b'>new repository</button>
+            <button className='b'>Add Local Repository</button>
+            <button className='b'>Clone Repository</button >
+            <button className='b'>Issue</button>
+            <button className='b'>Current Repository</button>
+
+            <Card className='gitui'>
+              <Card.Title>Profile</Card.Title>
+            </Card>
+            <Card className='gitui'>
+              <Card.Title>Name</Card.Title>
+            </Card>
+            <Card className='gitui'>
+              <Card.Title>NickName</Card.Title>
+            </Card>
         </Container>
       </div>
   )

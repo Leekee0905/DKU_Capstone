@@ -1,28 +1,60 @@
 package com.study.board.controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.study.board.entity.Board;
-import com.study.board.entity.User;
-import com.study.board.repository.UserRepository;
 import com.study.board.service.BoardService;
-import com.study.board.service.LoginService;
+
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.security.sasl.SaslServer;
-
-@Slf4j
-@Controller
+@RequiredArgsConstructor
+@RestController
 public class BoardController {
 
-    @Autowired
+
     private BoardService boardService;
 
-    @GetMapping("/board/write") //localhost:8080/board/write
+        @CrossOrigin
+        @PostMapping("board")
+        public ResponseEntity<?> save(@RequestBody Board board) {
+            return new ResponseEntity<>(boardService.저장하기(board), HttpStatus.CREATED); // 200
+        }
+
+        @CrossOrigin
+        @GetMapping("board")
+        public ResponseEntity<?> findAll() {
+            return new ResponseEntity<>(boardService.모두가져오기(), HttpStatus.OK); // 200
+        }
+
+        @CrossOrigin
+        @GetMapping("/board/{id}")
+        public ResponseEntity<?> findById(@PathVariable Integer id) {
+            return new ResponseEntity<>(boardService.한건가져오기(id), HttpStatus.OK); // 200
+        }
+
+        @CrossOrigin
+        @PutMapping("/board{id}")
+        public ResponseEntity<?> update(@PathVariable Integer id, @RequestBody Board board) {
+            return new ResponseEntity<>(boardService.수정하기(id, board), HttpStatus.OK); // 200
+        }
+
+        @CrossOrigin
+        @DeleteMapping("/board/{id}")
+        public ResponseEntity<?> deleteById(@PathVariable Integer id) {
+            return new ResponseEntity<>(boardService.삭제하기(id), HttpStatus.OK); // 200
+        }
+
+
+    /*@GetMapping("/board/write") //localhost:8080/board/write
     public String boardWriteForm() {
 
         return "boardWriter";
@@ -85,7 +117,5 @@ public class BoardController {
 
         return "redirect:/board/list";
 
-    }
-
-
+    }*/
 }
