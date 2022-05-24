@@ -1,0 +1,15 @@
+.container{
+  border: 1px;
+  position: relative;
+}
+
+.gitui{
+  width: 100px;
+}
+
+.b{
+  width: 150px;
+  display: block;
+  margin-right: auto;
+  border: 1px;
+}
