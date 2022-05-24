@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {Container, Form, Button} from 'react-bootstrap'
+import './Write.css'
 
 function Write(){
 
@@ -30,8 +31,8 @@ function Write(){
   return (
     <div>
       <Container>
-        <h3>글쓰기</h3>
-        <Form onSubmit={handleWrite}>
+        
+        <Form className="writeform" onSubmit={handleWrite}>
         <Form.Group className="mb-3" controlId="formTitle">
           <Form.Control type='text' placeholder='제목을 입력하세요' value={post.title} onChange={handleForm} name='title' />
         </Form.Group>

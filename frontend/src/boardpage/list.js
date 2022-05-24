@@ -31,7 +31,7 @@ export const List=()=>{
     setPosts(posts.filter((post) => post.id !==id));
   }
   return (
-/*  <div>
+    <div>
     <Table striped bordered hover>
       <thead>
         <tr>
@@ -42,27 +42,47 @@ export const List=()=>{
       <tbody>
         <tr>
           <td>1</td>
-
         </tr>
         <tr>
           <td>2</td>
-
         </tr>
         <tr>
           <td>3</td>
-
+        </tr>
+        <tr>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>10</td>
         </tr>
       </tbody>
-      <Form>
+      <Form className="writebutton">
         <input type="text" placeholder="제목을 입력하세요" value={post.title}/>
         <input className='content' type="text" placeholder="내용을 입력하세요" value={post.content}/>
-        <button type='button' onClick={handleWrite}>글쓰기</button>
+        <button className="writebutton" type='button' onClick={handleWrite}>글쓰기</button>
       </Form>
     </Table>
     
-  </div>*/
+  </div>
+  )
+}
 
-  <div>
+  /*<div>
     <Container>
         <h3>글쓰기</h3>
         <Form onSubmit={handleWrite}>
@@ -93,6 +113,6 @@ export const List=()=>{
   </div>
   )
   
-}
+}*/
 
 export default List;

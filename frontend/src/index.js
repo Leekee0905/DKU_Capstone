@@ -24,8 +24,8 @@ function App() {
       <Header></Header>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/Info" element={<Info />}></Route>
-          <Route path="/Issue" element={<Issue />}></Route>
+          <Route path="/Info/*" element={<Info />}></Route>
+          <Route path="/Issue/*" element={<Issue />}></Route>
           <Route path="/Login" element={<Login />}></Route>
           <Route path="/Free/*" element={<Free />}></Route>
           <Route path="/Git" element={<Git />}></Route>

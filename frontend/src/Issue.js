@@ -9,10 +9,7 @@ function Issue(){
       <div>
         <h2>Issue</h2>
         <List></List>
-        <Link to = "/Issue/Write" >글쓰기</Link>
-        <Routes>
-          <Route path="/Write" element={<Write/>}></Route>
-        </Routes>
+        <Link to = "/Write" >글쓰기</Link>
       </div>
   )
 }

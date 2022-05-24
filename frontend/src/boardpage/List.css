@@ -1,3 +1,9 @@
 #formContent{
   height: 200px;
+
+}
+
+.writebutton{
+  float: right;
+  display: block;
 }

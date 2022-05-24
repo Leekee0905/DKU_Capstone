@@ -24,13 +24,13 @@ public class BoardController {
     private BoardService boardService;
 
         @CrossOrigin
-        @PostMapping("board")
+        @PostMapping("/board")
         public ResponseEntity<?> save(@RequestBody Board board) {
             return new ResponseEntity<>(boardService.저장하기(board), HttpStatus.CREATED); // 200
         }
 
         @CrossOrigin
-        @GetMapping("board")
+        @GetMapping("/board")
         public ResponseEntity<?> findAll() {
             return new ResponseEntity<>(boardService.모두가져오기(), HttpStatus.OK); // 200
         }
